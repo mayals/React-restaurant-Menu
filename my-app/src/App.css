@@ -1,38 +1,79 @@
-.App {
+.App-style{
+  background-color: #ffffff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* https://fonts.google.com/specimen/Ubuntu */
+  font-family: 'DynaPuff', cursive;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.header-style {
+  color:crimson;
+  font-family: 'Ubuntu', sans-serif;
+  font-size:30px;
+  font-weight: bold;
+  initial-letter: 0;
+  line-height: 64px;
+}
+
+
+.header-underline-style{
+  border-bottom: 4px crimson solid;
+  width:200px;
+  margin-top: 6px;
+}
+
+
+.category-button {
+  /* background-color: #008CBA; */
+  border: none;
+  color: white;
+  padding: 10px 24px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 8px;
+
+  background-color: white;
+  color: black;
+  border: 2px solid crimson;
+
+  transition-duration: 0.4s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.category-button:hover {
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 8px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: crimson; /* Green */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card-image{
+  height: 150px;
+  width: 230px!important;
+  border-radius:5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-title{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+}
+
+.card-price{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  color:crimson
+}
+
+.card-description{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
 }
