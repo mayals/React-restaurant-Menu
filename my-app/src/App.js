@@ -10,24 +10,43 @@ import { useState } from 'react';
 const App = () => {
 
     const [resultData ,setResultData]= useState(data)
-    
+
+    // get new array cantain all categories(unrepeated categories) by using ...new Set
+    const categoriesArray = [ 'ALL', ...new Set(data.map( (item) =>item.category)) ]
+    console.log(categoriesArray)
+
+
     // filter by category
     const filterByCategoryFunction = (choicedCat) =>{
-                      if ( choicedCat === "ALL" ){
-                              setResultData(data)
-                      } else{
-                              const filteredDate = data.filter( (item) => item.category === choicedCat )
-                              setResultData(filteredDate)
-                      }                        
-    }
+                                                        if ( choicedCat === "ALL" ){
+                                                                setResultData(data)
+                                                        } else{
+                                                                const filteredDate = data.filter( (item) => item.category === choicedCat )
+                                                                setResultData(filteredDate)
+                                                        }                        
+                                                    }
     
     
+
+    // filter by search form
+    const filterBySearchFormFunction = (inputWord) =>{
+                                                        if ( inputWord !== "" ){
+                                                            const filteredDate = data.filter( (item) => item.title === inputWord  )
+                                                            setResultData(filteredDate)
+                                                        }                       
+                                                    }
+
+
+
+
+
     return ( 
               <div className="App-style"> 
-                  <NavbarComp/>
+                  <NavbarComp   filterBySearchFormFunction={filterBySearchFormFunction}/>
                     <Container>
                         <HeaderComp/>
-                        <CategoryComp filterByCategoryFunction={filterByCategoryFunction}/>
+                        <CategoryComp  filterByCategoryFunction={filterByCategoryFunction} 
+                                       categoriesArray={categoriesArray}/>
                         <CardComp data ={resultData}/>
                     </Container>
                 </div>
