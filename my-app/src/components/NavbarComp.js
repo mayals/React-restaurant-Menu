@@ -6,7 +6,7 @@ const NavbarComp = () =>{
                             return (
                                 <Navbar bg="dark"  variant="dark" expand="lg">
                                 <Container>
-                                    <Navbar.Brand href="#">Delicious Restaurant</Navbar.Brand>
+                                    <Navbar.Brand href="#" style={{color:"#f40097"}}>Delicious Restaurant</Navbar.Brand>
                                     <Navbar.Toggle aria-controls="navbarScroll" />
                                     <Navbar.Collapse id="navbarScroll">
                                     <Nav

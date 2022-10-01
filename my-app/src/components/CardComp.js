@@ -1,32 +1,37 @@
 import { Col, Row , Card } from "react-bootstrap";
 
 
-const CardComp =() =>{
+const CardComp =(props) =>{
     return(
             <Row>
-                <Col sm="12" className="mb-3">
-                    <Card className="d-flex flex-row">
-                        <Card.Img variant="top" src="images/p1.jpg" className="card-image"/>
-                        <Card.Body>
-                            <Card.Title className="d-flex justify-content-between">
-                                <div className="card-title">
-                                    Breakfast 1
-                                </div>  
-                                <div className="card-price">
-                                    15 $
-                                </div>  
-                            </Card.Title>
-                            <Card.Text>
-                                <div className="card-description text-muted">
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </div>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </Col>
+            { props.data.length ? props.data.map((item) => {               
+                                                            return( 
+                                                                <div key={item.id}>
+                                                                <Col sm="12" className="mb-3" >
+                                                                    <Card className="d-flex flex-row">
+                                                                        <Card.Img variant="top" className="card-image" src={`images/${item.img}`} />
+                                                                        <Card.Body>
+                                                                            <Card.Title className="d-flex justify-content-between">
+                                                                                <div className="card-title">
+                                                                                    {item.title}
+                                                                                </div>  
+                                                                                <div className="card-price">
+                                                                                    {item.price}
+                                                                                </div>  
+                                                                            </Card.Title>
+                                                                            <Card.Text>
+                                                                                <div className="card-description text-muted">
+                                                                                    {item.description}
+                                                                                </div>
+                                                                            </Card.Text>
+                                                                        </Card.Body>
+                                                                    </Card>
+                                                                </Col>
+                                                                </div>   
+                                                                )
+                                                            }):<div>No data</div> 
+            }
             </Row>
-    );
-}
-export default CardComp
+    )}
+
+export default CardComp;

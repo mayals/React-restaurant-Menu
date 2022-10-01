@@ -1,5 +1,5 @@
 .App-style{
-  background-color: #ffffff;
+  background-color: #faeefa;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* https://fonts.google.com/specimen/Ubuntu */
   font-family: 'DynaPuff', cursive;
@@ -7,7 +7,7 @@
 }
 
 .header-style {
-  color:crimson;
+  color:#d281b5;
   font-family: 'Ubuntu', sans-serif;
   font-size:30px;
   font-weight: bold;
@@ -17,7 +17,7 @@
 
 
 .header-underline-style{
-  border-bottom: 4px crimson solid;
+  border-bottom: 4px #d281b5 solid;
   width:200px;
   margin-top: 6px;
 }
@@ -36,7 +36,7 @@
 
   background-color: white;
   color: black;
-  border: 2px solid crimson;
+  border: 2px solid #d281b5;
 
   transition-duration: 0.4s;
 }
@@ -52,7 +52,7 @@
   border-radius: 8px;
 
 
-  background-color: crimson; /* Green */
+  background-color: #d281b5; /* Green */
   color: white;
 }
 
@@ -70,7 +70,7 @@
 .card-price{
   font-family: 'Ubuntu', sans-serif;
   font-size: 18px;
-  color:crimson
+  color:#d281b5
 }
 
 .card-description{
