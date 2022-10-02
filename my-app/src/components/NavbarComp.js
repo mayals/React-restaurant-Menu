@@ -5,8 +5,8 @@ import { useState } from 'react';
 const NavbarComp = ({filterBySearchFormFunction}) =>{
                                     const [searchValue ,setSearchValue]= useState('')
                                     const getSearchvalueFunction = (searchValue) =>{
-                                                                 filterBySearchFormFunction(searchValue)
-                                                                 setSearchValue('')
+                                                                                    filterBySearchFormFunction(searchValue)
+                                                                                    setSearchValue('')
                                     }
                                     return (
                                             <Row>

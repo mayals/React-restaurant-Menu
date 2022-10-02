@@ -1,9 +1,12 @@
 import { Col, Row , Card } from "react-bootstrap";
 
+// https://www.react-reveal.com/examples/common/zoom/
+import Zoom from 'react-reveal/Zoom';
 
 const CardComp =(props) =>{
     return(
             <Row>
+            <Zoom left>
             { props.data.length ? props.data.map((item) => {               
                                                             return( 
                                                                 <div key={item.id}>
@@ -31,6 +34,7 @@ const CardComp =(props) =>{
                                                                 )
                                                             }):<div>No data</div> 
             }
+            </Zoom>
             </Row>
     )}
 
