@@ -16,7 +16,7 @@ const App = () => {
     console.log(categoriesArray)
 
 
-    // filter by category
+    // filter by category:
     const filterByCategoryFunction = (choicedCat) =>{
                                                         if ( choicedCat === "ALL" ){
                                                                 setResultData(data)
