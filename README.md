@@ -1,2 +1,4 @@
 # React-restaurant-Menu
-## React.JS
+## React.JS 
+
+"react-bootstrap": "^2.5.0",
