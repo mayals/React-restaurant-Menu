@@ -16,10 +16,11 @@
 }
 
 
-.header-underline-style{
-  border-bottom: 4px #d281b5 solid;
-  width:200px;
-  margin-top: 6px;
+.header-underline-style {
+  height: 1px;
+  width: 200px;
+  border-radius: 10px;
+  border: 2px solid rgb(244, 0, 151);
 }
 
 

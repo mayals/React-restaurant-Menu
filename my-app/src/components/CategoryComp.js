@@ -1,5 +1,5 @@
 import { Col, Row } from "react-bootstrap";
-
+import React from 'react';
 
 const CategoryComp =(props) =>{
 
@@ -8,14 +8,19 @@ const CategoryComp =(props) =>{
                                            }
 
     return(
+        <React.Fragment >
         <Row className="mb-5">
             <Col sm="12" className="justify-content-center text-center d-flex">
-                { props.categoriesArray.length ? ( props.categoriesArray.map((catitem) =>
-                                                                            { return(<button onClick={ () => {choicedCateFun(catitem)} }  
+                { props.categoriesArray.length ? ( props.categoriesArray.map((catitem,index) =>
+                                                                            { return(
+                                                                                    <div key={index}>
+                                                                                        <button onClick={ () => {choicedCateFun(catitem)} }  
                                                                                                 type="button" 
-                                                                                           className="category-button  btn-outline-dark mx-2 my-2">
-                                                                                     {catitem}
-                                                                                     </button>)   
+                                                                                                className="category-button  btn-outline-dark mx-2 my-2">
+                                                                                                {catitem}
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    )   
                                                                             })
                                                  ):<div>No categories found !!</div> }
                 
@@ -29,6 +34,7 @@ const CategoryComp =(props) =>{
                 </div> */}
             </Col>
         </Row>
+        </React.Fragment>
     );
 }
 

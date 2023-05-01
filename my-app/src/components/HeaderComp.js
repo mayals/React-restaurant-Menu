@@ -8,7 +8,7 @@ const  HeaderComp = () =>{
                         Food Menu
                     </div>
                     <div className="justify-content-center d-flex">
-                        <p className="header-underline-style" ></p>
+                        <span className="header-underline-style" ></span>
                     </div>
                 </Col>
             </Row>
